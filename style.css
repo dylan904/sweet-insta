@@ -10141,3 +10141,4 @@ a.sp-cancel:hover {
 }
 
 body{overflow:hidden}
+body > *:not(#slideshow) {display: none;}
