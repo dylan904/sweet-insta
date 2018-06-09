@@ -6989,7 +6989,7 @@ button.close {
     font-family: 'Montserrat Light';
     font-style: normal;
     font-weight: 400;
-    src: local("Montserrat Light"),local("Montserrat-Light"),url(fonts/Montserrat/Montserrat-Light.woff) format("woff"),url(fonts/Montserrat/Montserrat-Light.ttf) format("truetype")
+    src: local("Montserrat Light"),local("Montserrat-Light"),url(fonts/Montserrat/Montserrat-Light.ttf) format("truetype")
 }
 
 html {
