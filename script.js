@@ -14,7 +14,7 @@ var instaHash = '42323d64886122307be10013ad2dcc44',
     instaAfter,
     slideI = 0,
     slidesReady = false,
-    slideTime = 60000,
+    slideTime = 6000,
     $newSlide, $lastSlide, $slides,
     searchHashtagRegex = /\#((jaxcakes)|(orlandocakes)|(jaxwedding)|(orlandowedding)|(wedding)|(cakestagram))/gi,
     //to1 = '/graphql/query/?query_hash=' + instaHash + '&variables=%7B%22id%22%3A%22175787939%22%2C%22first%22%3A50%7D',
@@ -92,6 +92,7 @@ function queryCB(xhr) {
 function initQueryCB(xhr) {
     queryCB(xhr);
 
+	nextSlide();
     setInterval(nextSlide, slideTime);
 }
 
@@ -134,7 +135,7 @@ function nextSlide() {
         $newSlide.addClass('current');
 
         if ($lastSlide.length) {
-            $lastSlide.on('transitionend webkitTransitionEnd', function() {
+            $newSlide.on('transitionend webkitTransitionEnd', function() {
                 $lastSlide.remove();
             });
         }
